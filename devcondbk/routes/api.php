@@ -44,8 +44,8 @@ Route::middleware('auth:api')->group(function(){
     Route::post('/auth/logout', [AuthController::class, 'logout']);
 
     //Mural de avisos
-    Route::get('/auth/walls', [WallController::class, 'getAll']);
-    Route::post('/auth/wall/{id}/like', [WallController::class, 'like']);
+    Route::get('/walls', [WallController::class, 'getAll']);
+    Route::post('/wall/{id}/like', [WallController::class, 'like']);
 
     //Documentos
     Route::get('/docs', [DocController::class, 'getAll']);
